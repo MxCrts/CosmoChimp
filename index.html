@@ -6,51 +6,61 @@
     <title>CosmoChimp - The Ultimate Moonshot</title>
     <style>
         /* Reset and Basic Styles */
-        body, html {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0a0b3d, #1c1f5a);
+            background: linear-gradient(to bottom, #0e153a, #1c1f5a);
             color: #ffffff;
+            margin: 0;
             overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(to right, #0e123a, #221d72);
-            padding: 20px 50px;
+            background: linear-gradient(to right, #1e2a52, #31427d);
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             font-size: 3rem;
-            margin: 0;
             color: #ffc700;
+            margin: 0;
         }
 
         header p {
             font-size: 1.2rem;
-            margin: 10px 0 0;
             color: #d1d1e0;
         }
 
         .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 50px 20px;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            background-blend-mode: overlay;
-            background-color: rgba(10, 11, 61, 0.6);
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #0e153a, #1c1f5a), url('CosmoChimp.png') no-repeat center center/contain;
+            color: #ffffff;
+            padding: 20px;
         }
 
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #ffc700;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 1.5rem;
-            line-height: 1.6;
             margin-bottom: 30px;
         }
 
@@ -58,39 +68,46 @@
             font-size: 1.2rem;
             padding: 15px 30px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             background-color: #ffc700;
-            color: #0a0b3d;
+            color: #0e153a;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .hero button:hover {
             background-color: #ffd84d;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 40px 20px;
-            background-color: #1c1f5a;
+            padding: 60px 20px;
+            background-color: #12163f;
+            gap: 20px;
         }
 
         .feature {
             max-width: 300px;
             margin: 20px;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             background: linear-gradient(to bottom right, #282f81, #343a99);
             text-align: center;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
         }
 
         .feature h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
+            color: #ffc700;
         }
 
         .feature p {
@@ -101,8 +118,9 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #0a0b3d;
+            background: #0e153a;
             color: #ffffff;
+            margin-top: 20px;
         }
 
         footer a {
@@ -113,6 +131,20 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .feature {
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -122,28 +154,28 @@
     </header>
 
     <section class="hero">
-        <h2>Join the Cosmic Journey</h2>
-        <p>CosmoChimp is not just a memecoin; it’s a revolution! Ride the hype train to the moon and beyond.</p>
-        <button onclick="alert('Launching Soon! Get Ready!')">Buy Now</button>
+        <h2>Embark on the Cosmic Journey</h2>
+        <p>CosmoChimp is your ticket to the stars, a memecoin revolution for dreamers and believers. Join the hype train now!</p>
+        <button onclick="alert('Launching Soon! Be Ready!')">Buy Now</button>
     </section>
 
     <section class="features">
         <div class="feature">
-            <h3>🚀 Moonshot Potential</h3>
-            <p>CosmoChimp is designed for exponential growth. Don’t miss your chance to HODL big!</p>
+            <h3>🚀 Unlimited Growth</h3>
+            <p>With CosmoChimp, the possibilities are endless. Don’t miss your chance to ride the cosmic wave.</p>
         </div>
         <div class="feature">
-            <h3>🐒 Community-Driven</h3>
-            <p>Be part of a strong, vibrant community pushing for success together.</p>
+            <h3>🐒 Community Power</h3>
+            <p>We are stronger together. CosmoChimp is driven by a passionate and growing community.</p>
         </div>
         <div class="feature">
-            <h3>🌌 Cosmic Vision</h3>
-            <p>A memecoin built to inspire, grow, and take the crypto world by storm.</p>
+            <h3>🌌 Visionary Potential</h3>
+            <p>A coin with a purpose and a galaxy of opportunities ahead.</p>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 CosmoChimp. All rights reserved. | <a href="#">Terms of Service</a></p>
+        <p>© 2025 CosmoChimp. All rights reserved. | 
     </footer>
 </body>
 </html>
