@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmoChimp - The Ultimate Moonshot</title>
     <style>
-        /* Reset and Basic Styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +13,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0e153a, #1c1f5a);
+            background: radial-gradient(circle at center, #0e153a, #1c1f5a);
             color: #ffffff;
-            margin: 0;
             overflow-x: hidden;
         }
 
@@ -27,13 +25,12 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #ffc700;
-            margin: 0;
         }
 
         header p {
@@ -48,13 +45,29 @@
             justify-content: center;
             text-align: center;
             min-height: 100vh;
-            background: linear-gradient(to bottom, #0e153a, #1c1f5a), url('CosmoChimp.png') no-repeat center center/contain;
+            background: url('assets/image/CosmoChimp.png') no-repeat center center;
+            background-size: contain;
             color: #ffffff;
             padding: 20px;
         }
 
+        .hero-overlay {
+            background: rgba(14, 21, 58, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
         .hero h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #ffc700;
             margin-bottom: 20px;
         }
@@ -62,6 +75,7 @@
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 30px;
+            line-height: 1.8;
         }
 
         .hero button {
@@ -85,7 +99,7 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 60px 20px;
-            background-color: #12163f;
+            background: linear-gradient(to bottom, #12163f, #0e153a);
             gap: 20px;
         }
 
@@ -96,7 +110,7 @@
             border-radius: 15px;
             background: linear-gradient(to bottom right, #282f81, #343a99);
             text-align: center;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
         }
 
@@ -154,9 +168,12 @@
     </header>
 
     <section class="hero">
-        <h2>Embark on the Cosmic Journey</h2>
-        <p>CosmoChimp is your ticket to the stars, a memecoin revolution for dreamers and believers. Join the hype train now!</p>
-        <button onclick="alert('Launching Soon! Be Ready!')">Buy Now</button>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Embark on the Cosmic Journey</h2>
+            <p>CosmoChimp is your ticket to the stars, a memecoin revolution for dreamers and believers. Join the hype train now!</p>
+            <button onclick="alert('Launching Soon! Be Ready!')">Buy Now</button>
+        </div>
     </section>
 
     <section class="features">
